@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baseline Buddy - Web Feature Compatibility Checker</title>
+    <meta name="description" content="Check if HTML, CSS, and JavaScript features are Baseline-safe with AI-powered explanations. Get browser support details and development tips.">
+    <meta name="keywords" content="web development, baseline, browser compatibility, css, html, javascript, frontend, web features">
+    <meta name="author" content="Baseline Buddy">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Baseline Buddy - Web Feature Compatibility Checker">
+    <meta property="og:description" content="Check if web features are Baseline-safe with AI-powered explanations">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com">
+    <meta property="og:image" content="https://yourdomain.com/icon-192.png">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Baseline Buddy">
+    <meta name="twitter:description" content="Check if web features are Baseline-safe with AI-powered explanations">
+    <meta name="twitter:image" content="https://yourdomain.com/icon-192.png">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#4361ee">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#4361ee">
+    <meta name="msapplication-TileColor" content="#4361ee">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourdomain.com">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Baseline Buddy</h1>
+            <p class="subtitle">Check if web features are Baseline-safe with AI-powered explanations</p>
+        </header>
+
+        <main>
+            <div class="search-section">
+                <div class="input-group">
+                    <input type="text" id="feature-input" placeholder="Enter a web feature (e.g., ':has()', 'grid', 'backdrop-filter')">
+                    <button id="check-button">Check Compatibility</button>
+                </div>
+                <div class="examples">
+                    <p>Try: <span class="example-feature" data-feature=":has()">:has()</span>, 
+                    <span class="example-feature" data-feature="grid">grid</span>, 
+                    <span class="example-feature" data-feature="backdrop-filter">backdrop-filter</span>, 
+                    <span class="example-feature" data-feature="dialog">dialog</span></p>
+                </div>
+            </div>
+
+            <div class="results-section" id="results-section" style="display: none;">
+                <div class="result-header">
+                    <h2 id="feature-name">Feature Name</h2>
+                    <div class="status-badge" id="status-badge">
+                        <span id="status-text">Status</span>
+                    </div>
+                </div>
+
+                <div class="explanation" id="explanation">
+                    <p>Explanation will appear here...</p>
+                </div>
+
+                <div class="browser-support">
+                    <h3>Browser Support</h3>
+                    <div class="browser-grid" id="browser-grid">
+                        <!-- Browser support icons will be populated here -->
+                    </div>
+                </div>
+
+                <div class="tips" id="tips">
+                    <h3>Tips & Alternatives</h3>
+                    <p>Tips will appear here...</p>
+                </div>
+
+                <div class="baseline-info" id="baseline-info">
+                    <h3>Baseline Information</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Baseline Status:</span>
+                            <span id="baseline-status">Unknown</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">First Supported:</span>
+                            <span id="first-supported">Unknown</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Specification:</span>
+                            <span id="specification">Unknown</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="loading" id="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Checking Baseline compatibility...</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>Baseline Buddy uses Baseline data from <a href="https://github.com/web-features/web-features" target="_blank">@web-features/web-features</a></p>
+        </footer>
+    </div>
+
+    <script src="baseline-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
